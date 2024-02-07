@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Navigation Bar" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-07T22:42:50" hostname="DESKTOP-LIKLS7P" time="5.519">
+  <properties/>
+  <testcase name="I can access to the subpages through the navigation bar" classname="Navigation Bar" time="5.519"/>
+  <system-out><![CDATA[
+Scenario: I can access to the subpages through the navigation bar   ?[90m# src/test/resources/features/Features.feature:6?[0m
+  ?[32mGiven ?[0m?[32mI navigate to Free Range Testers web page?[0m                   ?[90m# steps.FreeRangeSteps.iNavigateToFreeRangeTesters()?[0m
+  ?[32mWhen ?[0m?[32mI try to access the free sections through the navigation bar?[0m ?[90m# steps.FreeRangeSteps.iAccessToSectionThroughTheNavigationBar()?[0m
+  ?[32mThen ?[0m?[32mI am redirected to the right page?[0m                            ?[90m# steps.FreeRangeSteps.iAmInTheRightPage()?[0m
+]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+</testsuite>
