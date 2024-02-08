@@ -16,7 +16,7 @@ public class FreeRangeSteps {
 
     @When("I try to access the free sections through the navigation bar")
     public void iAccessToSectionThroughTheNavigationBar(){
-
+        landingPage.clickClassesOption();
     }
 
     @Then("I am redirected to the right page")
