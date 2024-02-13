@@ -2,7 +2,8 @@ package pages;
 
 public class MainPage extends BasePage{
 
-    public String classOption = "//nav[@aria-label='Main']//a[@class='sc-iqHXzD bOSpzC sc-crrtmM sc-dFJsne jBPSqi cBBApE'][normalize-space()='Cursos']";
+    private String classOption = "//a[normalize-space()='%s' and @href]";
+    private String selectPlanButton = "//a[normalize-space()='Elegir Plan' and @href]";
     public MainPage() {
         super(driver);
     }
@@ -11,8 +12,13 @@ public class MainPage extends BasePage{
         navigateTo("https://www.freerangetesters.com");
     }
 
-    public void clickClassesOption(){
-        clickElement(classOption);
+    public void clickClassesOption(String section){
+        String xpathSection = String.format(classOption, section);
+        clickElement(xpathSection);
+    }
+
+    public void clickSelectPlanOption(){
+        clickElement(selectPlanButton);
     }
 
 }

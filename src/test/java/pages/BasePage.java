@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BasePage {
 
@@ -57,6 +59,22 @@ public class BasePage {
     public void selectFromDropDownByValue(String locator, String value){
         Select dropDown = new Select(find(locator));
         dropDown.selectByValue(value);
+    }
+
+    public int dropDownSize(String locator){
+        Select dropDown = new Select(find(locator));
+        List<WebElement> dropDownOptions = dropDown.getOptions();
+        return dropDownOptions.size();
+    }
+
+    public List<String> getValuesFromADropDown(String locator){
+        Select dropDown = new Select(find(locator));
+        List<WebElement> dropDownValues = dropDown.getOptions();
+        List<String> values = new ArrayList<>();
+        for (WebElement option : dropDownValues){
+            values.add(option.getText());
+        }
+        return values;
     }
 
 }
